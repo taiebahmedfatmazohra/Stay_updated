@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+<html lang="en"dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons
+rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet"href="Stay_updated.css"/>
+<link rel="stylesheet"href="maktapa.css"/>
+<title>Stay updated!</title>
+</head>
+<body>
+<div id="fatma">
+<img src="1685533161620.jpg"alt="">
+<h1>Stay updated!</h1>
+<p>Join 60,000+ product managers receiving
+monthly updates on:</p><br>
+
+
+<ul>
+<div class="mag">
+<i class="fas fa-check-circle"></i><li>Product discovery and building what matters</li>
+</div>
+<div class="mag">
+<i class="fas fa-check-circle"></i><li>Measuring to ensure updates are a success</li>
+</div>
+<div class="mag">
+<i class="fas fa-check-circle"></i><li>And much more!</li>
+</div>
+</ul>
+
+<h3>Email address</h3>
+<form id="form" action="#">
+<div class="inputBox">
+<input type="text" name="" id="email" placeholder="email@company.com"onkeydown="validation()">
+<span id="text"></span>
+<button onclick="validateForm()">Subscribe to monthly newsletter</button>
+</div>
+<span id="subit-error"></span>
+</form>
+</div>
+<div id="thank"onkeydown="validation()">
+<img src="1685563179983.png"alt="">
+<h1>Thanks for<br>subscribing!</h1>
+<p>A confirmation email has been sent to<a href="" >ash@loremcompany.com.</a>Please open it and click the button inside to confirm your subscription</p>
+<form>
+<button>Dismiss message</button>
+</form>
+</div>
+
+
+
+<script type="text/javascript">
+function validation()
+{
+var form = document.getElementById("form");
+var email = document.getElementById("email").value;
+var text= document.getElementById("text"); 
+var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+if (email.match(pattern)){
+form.classList.add("valid");
+form.classList.remove("invalid");
+text.innerHTML = "Your Email Address in Valid.";
+text.style.color="green";
+document.getElementById('fatma').
+innerHTML="<form></form>";
+}
+else{
+form.classList.remove("valid");
+form.classList.add("invalid"); 
+text.innerHTML = "Please Enter Valid Email Address";
+text.style.color = "red";
+}
+}
+
+</script>
+
+</body>
+</html>
